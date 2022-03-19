@@ -72,7 +72,7 @@ func NewLog(levelStr string) Logger {
 }
 
 func newFileLog() *os.File {
-	fileObj, err := os.OpenFile("text.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	fileObj, err := os.OpenFile("wlog/text.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 
 	if err != nil {
 		fmt.Printf("Openfile failed,err:%v", err)
